@@ -1,0 +1,135 @@
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?8ztii4');
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?8ztii4#iefix') format('embedded-opentype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?8ztii4') format('truetype'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?8ztii4') format('woff'),
+      url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?8ztii4##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-wheel {
+    &:before {
+      content: $icon-wheel;     
+      color: #ffc925;
+    }
+  }
+  .icon-battery {
+    &:before {
+      content: $icon-battery;     
+      color: #ffc925;
+    }
+  }
+  .icon-sun {
+    &:before {
+      content: $icon-sun;     
+      color: #fff;
+    }
+  }
+  .icon-arrow-right {
+    &:before {
+      content: $icon-arrow-right;     
+      color: #fff;
+    }
+  }
+  .icon-hamburger {
+    &:before {
+      content: $icon-hamburger;     
+      color: #fff;
+    }
+  }
+  .icon-badge {
+    &:before {
+      content: $icon-badge;     
+      color: #fff;
+    }
+  }
+  .icon-close {
+    &:before {
+      content: $icon-close;     
+      color: #fff;
+    }
+  }
+  .icon-facebook {
+    &:before {
+      content: $icon-facebook;     
+      color: #fff;
+    }
+  }
+  .icon-google {
+    &:before {
+      content: $icon-google;     
+      color: #fff;
+    }
+  }
+  .icon-phone {
+    &:before {
+      content: $icon-phone;     
+      color: #fff;
+    }
+  }
+  .icon-twitter {
+    &:before {
+      content: $icon-twitter;     
+      color: #fff;
+    }
+  }
+  .icon-user {
+    &:before {
+      content: $icon-user;     
+      color: #fff;
+    }
+  }
+  .icon-vk {
+    &:before {
+      content: $icon-vk;     
+      color: #fff;
+    }
+  }
+  .icon-youtube {
+    &:before {
+      content: $icon-youtube;     
+      color: #fff;
+    }
+  }
+  .icon-arrow {
+    &:before {
+      content: $icon-arrow;     
+      color: #fff;
+    }
+  }
+  .icon-menu {
+    &:before {
+      content: $icon-menu;     
+      color: #fff;
+    }
+  }
+  .icon-star {
+    &:before {
+      content: $icon-star;     
+      color: #fff;
+    }
+  }
+  .icon-wezom-logo {
+    &:before {
+      content: $icon-wezom-logo;     
+      color: #fff;
+    }
+  }

@@ -1,0 +1,248 @@
+.filter {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    height: 100%;
+    &-header {
+        background-color: #606a76;
+        padding: 0 25px;
+    }
+    &-bottom {
+        background-color: $colorBodyForm;
+        height: 100%;
+        padding: 26px 32px 24px 36px;
+    }
+    &-nav {
+        &__list {
+            display: flex;
+            width: 100%;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 100%;
+            @media screen and (min-width: $size_md) {
+                white-space: initial;
+                max-width: auto;
+                overflow: initial;
+            }
+        }
+        &__item {
+            display: inline-flex;
+            
+            @media screen and (min-width: $size_md) {
+                width: 20%;
+            }
+        }
+        &__link {
+            display: inline-flex;
+            align-items: center;
+            align-self: stretch;
+            height: 100%;
+            color: rgba($colorWhite, $alpha: .4);
+            font-weight: 700;
+            padding: 10px 15px;
+            font-size: 14px;
+            width: 100%;
+            position: relative;
+            @media screen and (min-width: $size_md) {
+                padding: 10px 5px;
+                font-size: 12px;
+            }
+            @media screen and (min-width: $size_xl) {
+                padding: 19px;
+            }
+            &_end {
+                justify-content: flex-end;
+            }
+            &::after  {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #ffc925;
+                transform-origin: center;
+                transform: scaleX(0);
+                transition: transform 0.3s;
+            }
+            .icon {
+                filter: opacity(.6) grayscale(1);
+                font-size: 24px;
+            }
+            span {
+                padding-left: 10px;
+            }
+            &.is-active {
+                color: $colorWhite;
+                &::after {
+                    transform: scaleX(1);
+                }
+                .icon {
+                    filter: none;
+                }
+            }
+            &:hover {
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+    &__tabs {
+        background-color: #efefef;
+        display: inline-flex;
+        padding: 3px;
+    }
+    &__tab-content{
+       display: none;
+       &.is-active {
+           display: block;
+       }
+    }
+    &__tab {
+        font-size: 14px;
+        color: $colorBodyForm;
+        padding: 11px 41px;
+        background-color: transparent;
+        @media screen and (min-width: $size_sm) {
+            padding: 11px 51px;
+        }
+        
+        &.is-active {
+            @extend .btn-orange;
+            color: $colorWhite;
+        }
+    }
+}
+.filter-form {
+    &__input {
+        background-color: $colorWhite;
+        margin: 0;
+        border-width: 0 0 1px 0;
+        border-bottom: 1px solid $colorBodyForm;
+        color: #3b3b3b;
+        font-size: 14px;
+        @include placeholder() {
+            color: #9c9c9c;
+            font-size: 14px;
+        }
+    }
+    &__row {
+        @include row-flex();
+        flex-wrap: nowrap;
+        margin-left: -10px;
+        margin-right: -10px; 
+        
+        flex-wrap: wrap;
+        &_center {
+            justify-content: flex-start;
+            @media screen and (min-width: $size_md) {
+                justify-content: space-between;
+            }
+            @media screen and (min-width: $size_xl) {
+                justify-content: center;
+            }
+        }
+        &_betw {
+            justify-content: space-between;
+        }
+    }
+    &__container {
+        @include col();
+        @include size(6);
+        width: calc(50% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 23px;
+        border-bottom: 1px solid $colorWhite;
+        padding-bottom: 1px;
+        &_b0{
+            border-bottom: 0;
+        }
+        span {
+            font-size: 14px;
+        }
+        &_inputs {
+            width: auto;
+                margin-top: 23px;
+            @media screen and (min-width: $size_xs) {
+                min-width: 300px;
+            }
+            @media screen and (min-width: $size_xl) {
+                width: calc(25% - 20px);
+                min-width: auto;
+            }
+        } 
+        @media screen and (min-width: $size_xs) {
+            @include size(3);
+            width: calc(25% - 20px);
+        }
+    }
+    &__label {
+        width: 35.33%;
+        display: inline-flex;
+        border-bottom: 1px solid $colorWhite;
+        padding-bottom: 1px;
+        margin-left: 10px;
+        position: relative;
+        @media screen and (min-width: $size_md) {
+            margin-left: 20px;
+        }
+        @media screen and (min-width: $size_xl) {
+           margin-left: 10px;
+        }
+    }
+      
+    &__input {
+        display: inline-flex;
+        width: 100%;
+        height: 40px;
+        padding-left: 10px;
+        
+    }
+    &__select {
+        width: 100%;
+        border-radius: 0;
+        height: 40px;
+        padding-left: 13px;
+    }
+    &__reset {
+        padding: 13px 40px;
+        margin: 0 10px;
+        margin-top: 23px;
+        width: 100%;
+        @media screen and (min-width: $size_xs) {
+            width: auto;
+        }
+        .icon {
+            font-size: 12px;
+        }
+    }
+    &__submit {
+        padding: 17px 33px;
+        margin: 0 10px;
+        margin-top: 23px;
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        @media screen and (min-width: $size_xs) {
+            width: auto;
+        }
+        span {
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            position: relative;
+            color: $colorWhite;
+            text-transform: uppercase;
+        }
+    }
+    .error-message {
+        font-size: 10px;
+        min-width: 100px;
+        bottom: -35px;
+    }
+}

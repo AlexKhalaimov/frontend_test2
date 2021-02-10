@@ -1,0 +1,66 @@
+.sidebar {
+    @include col();
+    display: none;
+    @media screen and (min-width: $size_md) {
+        width: 25%;
+        display: block;
+    }
+    @media screen and (min-width: $size_lg) {
+        width: 325px;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__title {
+        color: $colorWhite;
+        font-size: 20px;
+        font-weight: 700;
+        background: $gradient;
+        padding: 18px 23px;
+        width: 100%;
+        text-transform: capitalize;
+    }
+    .icon {
+        padding: 20px 24px;
+        background-color: #db7200;
+    }
+}
+.sidebar-nav {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-top: 13px;
+        border: 1px solid #e8e8e8;
+        border-width: 0 1px 0 1px;
+    }
+    &__item {
+        border-bottom: 1px solid #e8e8e8;
+        border-width: 0 1px 1px 1px;
+    }
+    &__link {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $colorBlack;
+        padding: 21px 31px 16px 40px;
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+        &::after {
+            font-family: "wezom-test"!important;
+            content: '\e900';
+            display: inline-flex;
+            font-size: 12px;
+            color: #c0c4d8;
+            margin-left: auto;
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            &::after {
+                transform: translateX(10px);
+            }
+        }
+    }
+}

@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+
+    &::before, &::after {
+        box-sizing: border-box
+    } 
+}
+
+body {
+    font-family: $fontPrimary;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+
+    @include wrapper();
+
+    max-width: 100%;
+
+    @media screen and (min-width: $size_sm){
+        max-width: 740px;
+    }
+    @media screen and (min-width: $size_md){
+        max-width: 960px;
+    }
+    @media screen and (min-width: $size_lg){
+        max-width: 1160px;
+    }
+    @media screen and (min-width: $size_xl){
+        max-width: 1380px;
+    }
+}
+.row {
+    @include row-flex();
+}
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.body-fixed {
+    overflow: hidden !important;
+    padding-right: 17px;
+}
+.btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-orange {
+    background-color: $colorOrange;
+    &:hover {
+        background-color: $colorDarkOrange;
+    }
+}
+.btn-darkorange {
+    background-color: $colorDarkOrange;
+    &:hover {
+        background-color: $colorOrange;
+    }
+}
+.btn-red {
+    background-color: #ff4800;
+    color: $colorWhite;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: $colorDarkOrange;
+    }
+}
+.btn-gradient {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(90deg, #d36e00 0%, #e59100 40%, #ff8500 60%, #ffae00 100%);
+    transition: all 0.3s ease-in-out;
+    background-size: 200% auto;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto;
+    &:hover {
+        background-position: right center;
+    }
+}
+.icon-cart {
+    background-image: url(../img/dest/icons/icon-cart.svg);
+    width: 40px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-cart-w {
+    background-image: url(../img/dest/icons/icon-cart-w.svg);
+    width: 28px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-favorites {
+    background-image: url(../img/dest/icons/icon-favorites.svg);
+    width: 40px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-favorites-o {
+    background-image: url(../img/dest/icons/icon-favorites-o.svg);
+    width: 30px;
+    height: 29px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-compare {
+    background-image: url(../img/dest/icons/icon-compare.svg);
+    width: 40px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-compare-o {
+    background-image: url(../img/dest/icons/icon-compare-o.svg);
+    width: 34px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-car-right {
+    background-image: url(../img/dest/icons/icon-car-right.svg);
+    width: 40px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-truck {
+    background-image: url(../img/dest/icons/icon-truck.svg);
+    width: 50px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-oil {
+    background-image: url(../img/dest/icons/icon-oil.svg);
+    width: 40px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-badge-new {
+    background-image: url(../img/dest/icons/icon-badge-new.svg);
+    width: 53px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+.icon-car-left {
+    background-image: url(../img/dest/icons/icon-car-left.svg);
+    width: 53px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-flex;
+}
+
+.badge + .badge {
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.text-white {
+    color: $colorWhite;
+}
+.badge {
+    
+         background-position: bottom left, bottom right, top right, top left;
+            background-size: 51% 52%;
+            background-repeat: no-repeat;
+            width: 74px;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 0 5px 12px rgba(189, 17, 41, 0.5);
+    span {
+        color: $colorWhite;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+    }
+}
+.badge-green {
+    background-image: 
+    -webkit-radial-gradient(0% 0%,circle,rgba(204,0,0,0) 4px,$colorBadgeGreen 5px),
+    -webkit-radial-gradient(100% 0%,circle,rgba(204,0,0,0) 4px,$colorBadgeGreen 5px),
+    -webkit-radial-gradient(100% 100%,circle,rgba(204,0,0,0) 4px,$colorBadgeGreen 5px),
+    -webkit-radial-gradient(0% 100%,circle,rgba(204,0,0,0) 4px,$colorBadgeGreen 5px);
+}
+.badge-purple {
+    background-image: -webkit-radial-gradient(0% 0%,circle,rgba(204,0,0,0) 4px,$colorBadgePurple 5px),
+                    -webkit-radial-gradient(100% 0%,circle,rgba(204,0,0,0) 4px,$colorBadgePurple 5px),
+                    -webkit-radial-gradient(100% 100%,circle,rgba(204,0,0,0) 4px,$colorBadgePurple 5px),
+                    -webkit-radial-gradient(0% 100%,circle,rgba(204,0,0,0) 4px,$colorBadgePurple 5px);
+}
+.badge-red {
+    background-image: -webkit-radial-gradient(0% 0%,circle,rgba(204,0,0,0) 4px,$colorBadgeRed 5px),
+    -webkit-radial-gradient(100% 0%,circle,rgba(204,0,0,0) 4px,$colorBadgeRed 5px),
+    -webkit-radial-gradient(100% 100%,circle,rgba(204,0,0,0) 4px,$colorBadgeRed 5px),
+    -webkit-radial-gradient(0% 100%,circle,rgba(204,0,0,0) 4px,$colorBadgeRed 5px);
+}
+.overlay {
+    background-color: rgba(30, 30, 30, .8);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    display: none;
+    bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 99999;
+    &.is-open {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 99999;
+    }
+}
+.error-message {
+    color: $colorBadgeRed;
+    font-size: 12px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    background-color: $colorWhite;
+    padding: 5px;
+    transform: translateX(-50%);
+    display: inline-flex;
+    width: 100%;
+    max-width: 90%;
+    border: 1px solid $colorBgForm;
+    text-align: center;
+    justify-content: center;
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.69 25.35">
+    <title>car</title>
+    <line x1="35.22" y1="19.5" x2="17.4" y2="19.5"
+          style="fill:none;stroke:#ff8500;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+    <path d="M812.92,211.35a15,15,0,0,1-1.84,0c-2-.1-4.92-.67-4.92-3.09,0-3.23,3.92-6.38,6.53-7,2.33-.55,7.3-.85,12.44-4.85a14.52,14.52,0,0,1,7.47-2.93c1-.1,2-.14,2.94-.16a14.77,14.77,0,0,1,8.31,2.42l3.2,2.08a10.53,10.53,0,0,0,4.82,1.69l1.66.15a2.57,2.57,0,0,1,2.33,2.56v5.95s-.08,3.15-6.23,3.15"
+          transform="translate(-804.66 -191.85)"
+          style="fill:none;stroke:#ff8500;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+    <circle cx="12.97" cy="19.54" r="4.31"
+            style="fill:none;stroke:#ff8500;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+    <circle cx="40" cy="19.54" r="4.31"
+            style="fill:none;stroke:#ff8500;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+    <line x1="12.97" y1="8.37" x2="30.22" y2="8.37"
+          style="fill:none;stroke:#ff8500;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+</svg>

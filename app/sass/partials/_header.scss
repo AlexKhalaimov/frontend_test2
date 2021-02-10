@@ -1,0 +1,327 @@
+.header {
+    &__top {
+        background-color: #696969;
+    }
+    &__bottom {
+        padding: 30px 0 31px;
+    }
+    &__container {
+        display: flex;
+        align-items: center
+    }
+    &__register {
+        padding: 17px 28px;
+        color: $colorWhite;
+        font-size: 12px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        margin-left: auto;
+        .icon {
+            font-size: 15px;
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+        span {
+            padding: 0 3px;
+        }
+    }
+    &-logo {
+        @include col();
+        @include size(4);
+        @include size-md(3);
+        padding: 5px 0;
+        &__img {
+            transform: translateY(5px);
+        }
+    }
+    &-callback {
+        display: flex;
+        align-items: center;
+        @include col();
+        @include size(3);
+        @include size-xs(3);
+        @include size-md(6);
+        padding: 5px 0;
+        margin-left: auto;
+        
+        &__link {
+            color: $colorPhones;
+            font-size: 16px;
+            font-weight: 700;
+            font-style: italic;
+            display: none;
+            padding: 15px 10px 15px 10px;
+            background-color: $colorBgForm;
+            
+            align-items: center;
+            line-height: 1.2;
+            @media screen and (min-width: $size-md){
+                display: inline-flex;
+            }
+            &:last-of-type{
+                padding-right: 13px;
+                
+                
+                @media screen and (min-width: $size-lg){
+                    padding-right: 23px;
+                }
+                @media screen and (min-width: $size-xl){
+                    padding-right: 43px;
+                }
+            }
+            @media screen and (min-width: $size-md){
+                font-size: 12px;
+            }
+            @media screen and (min-width: $size-lg){
+                font-size: 16px;
+                padding: 15px 23px 15px 13px;
+            }
+        }
+        &__btn {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $colorWhite;
+            display: inline-flex;
+           padding: 10px;
+           margin-left: auto;
+            @media screen and (min-width: $size-md){
+                padding: 17px 41px 17px 34px;
+                margin-left: 0;
+            }
+            span {
+                font-size: 12px;
+                letter-spacing: -1px;
+                display: none;
+                @media screen and (min-width: $size-md){
+                    display: inline-flex;
+                }
+                
+            }
+            .icon {
+                font-size: 24px;
+                @media screen and (min-width: $size-md){
+                    font-size: 15px;
+                    padding-right: 3px;
+                }
+                
+            }
+        }
+    }
+    &-info {
+        @include col();
+        @include size(5);
+        @include size-xs(4);
+        @include size-sm(4);
+        @include size-md(3);
+        display: flex;
+        padding: 5px 0;
+    }
+    &-info-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 33.333%;
+        &:not(:last-child) {
+            @media screen and (min-width: $size-md){
+                border-right: 1px solid #e4e4e4;
+            }
+            
+        }
+        &__link {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__counter {
+            position: absolute;
+            top: 0;
+            padding: 2px 6px;
+            background-color: $colorOrange;
+            font-size: 11px;
+            color: $colorWhite;
+            line-height: 1;
+            box-shadow: 0px 6px 11px 1px $colorOrange;
+            transform: translateY(-170%);
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 3.5px 0 3.5px;
+                border-color: #ff8800 transparent transparent transparent;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__title {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: $colorText;
+            display: none;
+            @media screen and (min-width: $size-md){
+                display: inline-flex;
+            }
+        }
+        .icon {
+            @media screen and (min-width: $size-md){
+                margin-bottom: 8px;
+            }
+           
+        }
+    }
+    &__menu-btn {
+        display: inline-flex;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+
+        .icon {
+            font-size: 32px;
+        }
+        @media screen and (min-width: $size-md){
+            display: none;
+        }
+    }
+    &__menu-close {
+        display: inline-flex;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        .icon {
+            font-size: 32px;
+            &::before {
+                color: $colorBlack;
+                @media screen and (min-width: $size-xs){
+                    color: $colorWhite;
+                }
+            }
+        }
+        @media screen and (min-width: $size-xs){
+            position: static;
+            margin-left: 25px;
+        }
+        @media screen and (min-width: $size-md){
+            display: none;
+        }
+    }
+}
+.header-nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgba($color: #000000, $alpha: .5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    right: 0;
+    display: flex;
+    transition: all .3s ease-in-out;
+    @media screen and (min-width: $size-md) {
+        @include row-flex();
+        position: static;
+        background: none;
+        width: auto;
+        height: auto;
+    }
+    &.menu-open {
+        left: 0;
+    }
+    &__list {
+        display: flex;
+       background-color: $colorBgForm;
+       flex-direction: column;
+       min-width: 300px;
+       max-width: 500px;
+       height: 100%;
+       width: 100%;
+       @media screen and (min-width: $size-xs){
+        width: auto;
+        }
+        @media screen and (min-width: $size-md) {
+            align-items: center;
+            margin-left: -7px;
+            flex-direction: row;
+            background-color: transparent;
+            height: auto;
+            min-width: auto;
+            max-width: auto;
+        }
+    }
+    &__item{
+        margin-right: 7px;
+    }   
+    &__link {
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $colorBlack;
+        display: inline-flex;
+        transition: all .3s ease-in-out;
+        position: relative;
+        font-weight: 700;
+        padding: 10px;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $colorBorder;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        &_active {
+            &::after {
+                background-color: $colorLine;
+            }
+        }
+        @media screen and (min-width: $size-md) {
+            font-size: 12px;
+            color: $colorHeaderLink;
+            padding: 19px 14px;
+            font-weight: 400;
+            &:hover {
+                color: $colorWhite;
+                &::after {
+                    width: 100%;
+                }
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: $colorLine;
+                transition: width .3s ease-in-out;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            
+            &_active{
+                color: $colorWhite;
+                &::after {
+                    width: 100%;
+                }
+            }
+            &_home {
+               color:  $colorHeaderLinkHome;
+            }
+        }
+        
+        
+        
+    }
+}

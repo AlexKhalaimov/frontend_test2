@@ -1,0 +1,119 @@
+// font
+
+$icomoon-font-family: "wezom-test" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon-wheel: "\e903";
+$icon-battery: "\e904";
+$icon-sun: "\e902";
+$icon-arrow-right: "\e900";
+$icon-hamburger: "\e901";
+$icon-badge: "\e907";
+$icon-close: "\e908";
+$icon-facebook: "\e909";
+$icon-google: "\e90a";
+$icon-phone: "\e90b";
+$icon-twitter: "\e90c";
+$icon-user: "\e90d";
+$icon-vk: "\e90e";
+$icon-youtube: "\e90f";
+$icon-arrow: "\e910";
+$icon-menu: "\e911";
+$icon-star: "\e914";
+$icon-wezom-logo: "\e916";
+
+$fontPrimary: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+
+// sizes
+$size_xs: 560px;
+$size_sm: 768px;
+$size_md: 1025px;
+$size_lg: 1200px;
+$size_xl: 1400px;
+
+// colors
+
+$colorBlack: #3b3b3b;
+$colorPlaceholder: #9c9c9c;
+$colorText: #3d3d3d;
+$colorOrange: #ff8900;
+$colorDarkOrange: #db7200;
+$colorBorder: #d2d2d2;
+$colorWhite: #fff;
+$colorRed: #ff4800;
+$gradient: linear-gradient(to right, #ff8500 0%, #ffae00 100%);
+$gradientHover: linear-gradient(to right, #d36e00 0%, #e59100 100%);
+$colorPhones: #151515;
+$colorBgForm: #f5f5f5;
+$colorLines: #e8e8e8;
+$colorTabs: #efefef;
+$colorTopForm: #606a76;
+$colorBodyForm: #696969;
+$colorLine: #ffc925;
+$colorMark: #848484;
+$colorMarkBg:#f2f2f2;
+$colorCardReviews: #9b9b9b;
+$colorCardQuantity: #757575;
+$colorCardBage: #91959a;
+$colorCardPriceOld: #989898;
+$colorCardBorder: #dbdbdb;
+$colorBadgeGreen: #2eb68e;
+$colorBadgePurple: #a25fd1;
+$colorBadgeRed: #e33c53;
+$colorTitleBottom: #ff8500;
+$colorFooterTitle: #cbcbcb;
+$colorFooterLinksBorder: #989898;
+$colorFooterCopyRght: #a0a9b2;
+$colorFooterSocialBorder: #7b8092;
+$colorFooterSocialBorderHover: #ffc925;
+$colorHeaderLink: #c3c3c3;
+$colorHeaderLinkHome: #c2c2c2;
+
+
+
+//mixins
+
+@mixin placeholder() {
+    $selector: '';
+    $prefixes: (
+        moz: "::-moz",
+        webkit: "::-webkit",
+        ie: ":-ms",
+        mozNew: ":-moz"
+    );
+    @each $prop, $value in $prefixes {
+        @if $prop != "moz" {
+            $selector: #{$value}-input-placeholder;
+        } @else {
+            $selector: #{$value}-placeholder;
+        }
+        @if & {
+          @if $prop == "moz" {
+            &#{$selector} {
+              @content;
+              opacity: 1;
+          }
+            
+          }
+          @else if $prop == "mozNew"{
+              &#{$selector} {
+                @content;
+                opacity: 1;
+            }
+          }
+          @else {
+              &#{$selector} {
+                @content;
+            }
+          }
+           
+        } @else {
+            #{$selector} {
+                @content;
+            }
+        }
+    }
+    &::placeholder {
+      @content;
+    }
+}

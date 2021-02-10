@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.33 34.71">
+    <line x1="34.29" y1="13.86" x2="24" y2="13.86"
+          style="fill:#ffeec7;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/>
+    <polyline points="1.5 1.5 8.67 1.5 18.17 20.57 32.83 20.57 37.83 6.8 19.5 6.8"
+              style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+    <circle cx="19.04" cy="29.67" r="3.54" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+    <circle cx="32.04" cy="29.67" r="3.54" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:3px"/>
+</svg>
